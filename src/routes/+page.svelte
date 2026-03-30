@@ -420,7 +420,7 @@
 				{#each optionals as optional, index (optional)}
 					<div {@attach fromAction(reveal, () => ({ delay: index * 50 }))}>
 						<div
-							class="group flex h-full cursor-pointer items-center gap-4 border border-white/10 p-6 transition-colors hover:border-[#c8a44d]/50"
+							class="group flex h-full cursor-pointer items-center gap-4 border border-white/10 p-4 transition-colors hover:border-[#c8a44d]/50"
 						>
 							<div
 								class="h-2 w-2 rounded-full bg-[#c8a44d] transition-transform group-hover:scale-150"
@@ -541,6 +541,44 @@
 						<p class="flex items-center gap-3">
 							<Globe class="h-4 w-4 text-[#c8a44d]" />
 							www.cnmkgl.ro
+						</p>
+						<p class="flex items-center gap-3">
+							<svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+								class="h-4 w-4 shrink-0 fill-current text-[#c8a44d]"
+							>
+								<path
+									d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12"
+								/>
+							</svg>
+							<a
+								href="https://www.facebook.com/cnmkgl1876"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="transition-colors hover:text-[#c8a44d]"
+							>
+								facebook.com/cnmkgl1876
+							</a>
+						</p>
+						<p class="flex items-center gap-3">
+							<svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+								class="h-4 w-4 shrink-0 fill-current text-[#c8a44d]"
+							>
+								<path
+									d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3Zm11.5 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"
+								/>
+							</svg>
+							<a
+								href="https://www.instagram.com/cnmk_cnmk/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="transition-colors hover:text-[#c8a44d]"
+							>
+								instagram.com/cnmk_cnmk
+							</a>
 						</p>
 					</div>
 				</div>
