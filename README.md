@@ -1,42 +1,81 @@
-# sv
+# Oferta CNMK Galati 2026
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Site de prezentare pentru participarea Colegiului National "Mihail Kogalniceanu" Galati la Targul de Oferta Educationala 2026.
 
-## Creating a project
+Aplicatia este construita cu SvelteKit (Svelte 5 + TypeScript), Tailwind CSS si este pregatita pentru rulare in sistem Cloudflare (Workers).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Tehnologii
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- SvelteKit 2 + Svelte 5 (runes mode)
+- TypeScript
+- Tailwind CSS 4
+- Bun (package manager)
+- Cloudflare Workers (adapter Cloudflare + Wrangler)
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-bun x sv@0.13.0 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography,forms" sveltekit-adapter="adapter:static" devtools-json mcp="ide:vscode+setup:local" --install bun oferta-targ-2026-1
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Instalare
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun install
 ```
 
-## Building
+## Dezvoltare locala
 
-To create a production version of your app:
+Porneste serverul de dezvoltare:
 
 ```sh
-npm run build
+bun run dev
 ```
 
-You can preview the production build with `npm run preview`.
+Comenzi utile:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+bun run check
+bun run lint
+bun run format
+```
+
+## Build
+
+Genereaza build-ul de productie:
+
+```sh
+bun run build
+```
+
+Previzualizeaza local build-ul:
+
+```sh
+bun run preview
+```
+
+## Deploy pe Cloudflare
+
+Proiectul foloseste `@sveltejs/adapter-cloudflare`, iar configuratia Wrangler este in `wrangler.json`.
+
+Flux recomandat pentru deploy:
+
+```sh
+bun run build
+bunx wrangler deploy
+```
+
+Asigura-te ca esti autentificat in Cloudflare inainte de deploy:
+
+```sh
+bunx wrangler login
+```
+
+## Structura continut
+
+Pagina principala include sectiunile de prezentare pentru oferta CNMK 2026:
+
+- Hero de introducere
+- Despre colegiu
+- Specialitati (profiluri/clase)
+- Meniu sezonier (optionale)
+- Experiente (cluburi/activitati)
+- Recomandari (premii, certificari)
+
+## Licenta
+
+Utilizare interna CNMK pentru comunicare si prezentare institutionala.
