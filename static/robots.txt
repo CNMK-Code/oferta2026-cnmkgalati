@@ -1,3 +1,4 @@
 # allow crawling everything by default
 User-agent: *
 Disallow:
+Sitemap: https://menu2026-cnmkgalati.cnmkstudio.ro/sitemap.xml
