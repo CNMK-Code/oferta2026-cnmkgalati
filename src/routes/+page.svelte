@@ -217,11 +217,11 @@
 			/>
 			<div class="absolute inset-0 z-10 bg-[#0f172a]/70 mix-blend-multiply"></div>
 			<div
-				class="absolute inset-0 z-20 bg-linear-to-b from-[#0f172a]/80 via-[#0f172a]/40 to-[#f7f1e8]"
+				class="absolute inset-0 z-20 bg-linear-to-b from-[#0f172a]/80 via-[#0f172a]/40 to-[#0f172a]"
 			></div>
 			<div
 				class="absolute inset-0 z-30 opacity-[0.05]"
-				style="background-image: radial-gradient(#f7f1e8 1px, transparent 1px); background-size: 32px 32px;"
+				style="background-image: radial-gradient(#f7f1e8 1px, transparent 1px);background-size: 32px 32px;-webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);mask-image: linear-gradient(to bottom, black 0%, transparent 100%);"
 			></div>
 		</div>
 
@@ -513,7 +513,7 @@
 					<img
 						src="/logo-modern.svg"
 						alt="CNMK Logo"
-						class="mb-6 h-12 w-auto opacity-90 brightness-0 invert"
+						class="mx-auto mb-6 h-12 w-auto opacity-90 brightness-0 invert md:mx-0"
 					/>
 					<p class="text-sm leading-relaxed font-light text-[#e8dcc6]">
 						Colegiul Național „Mihail Kogălniceanu” Galați.<br />
