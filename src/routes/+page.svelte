@@ -151,16 +151,25 @@
 
 <div class="min-h-screen bg-[#f7f1e8] text-[#0f172a] selection:bg-[#c8a44d] selection:text-white">
 	<nav
-		class={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-			isScrolled ? 'bg-[#0f172a]/95 py-4 shadow-lg backdrop-blur-sm' : 'bg-transparent py-6'
-		}`}
+		class={[
+			'fixed inset-x-0 top-0 z-50 transition-all duration-300',
+			{
+				'bg-[#0f172a]/95 py-4 shadow-lg backdrop-blur-sm': isScrolled,
+				'bg-transparent py-6': !isScrolled
+			}
+		]}
 	>
 		<div class="mx-auto flex max-w-7xl items-center justify-between px-6">
 			<a href={resolve('/')} class="flex items-center gap-2">
 				<img
 					src="/logo-modern.svg"
 					alt="CNMK Logo"
-					class={`h-10 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0 invert' : ''}`}
+					class={[
+						'h-10 w-auto transition-all duration-300',
+						{
+							'brightness-0 invert': isScrolled
+						}
+					]}
 				/>
 			</a>
 
@@ -168,9 +177,13 @@
 				{#each navLinks as link (link.sectionId)}
 					<a
 						href={resolve(`/#${link.sectionId}`)}
-						class={`text-sm tracking-[0.2em] uppercase transition-colors hover:text-[#c8a44d] ${
-							isScrolled ? 'text-[#e8dcc6]' : 'text-[#d7dce5]'
-						}`}
+						class={[
+							'text-sm tracking-[0.2em] uppercase transition-colors hover:text-[#c8a44d]',
+							{
+								'text-[#d7dce5]': !isScrolled,
+								'text-[#e8dcc6]': isScrolled
+							}
+						]}
 					>
 						{link.name}
 					</a>
@@ -219,10 +232,7 @@
 			<div
 				class="absolute inset-0 z-20 bg-linear-to-b from-[#0f172a]/80 via-[#0f172a]/40 to-[#0f172a]"
 			></div>
-			<div
-				class="absolute inset-0 z-30 opacity-[0.05]"
-				style="background-image: radial-gradient(#f7f1e8 1px, transparent 1px);background-size: 32px 32px;-webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);mask-image: linear-gradient(to bottom, black 0%, transparent 100%);"
-			></div>
+			<div class="grid-background absolute inset-0 z-30 opacity-[0.05]"></div>
 		</div>
 
 		<div class="relative z-30 mx-auto max-w-4xl px-6 text-center">
@@ -624,5 +634,12 @@
 	.reveal.revealed {
 		opacity: 1;
 		transform: translateY(0);
+	}
+
+	.grid-background {
+		background-image: radial-gradient(#f7f1e8 1px, transparent 1px);
+		background-size: 32px 32px;
+		-webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+		mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
 	}
 </style>
