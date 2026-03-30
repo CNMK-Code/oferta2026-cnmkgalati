@@ -1,23 +1,22 @@
 <script lang="ts">
-	import { fromAction } from 'svelte/attachments';
 	import { resolve } from '$app/paths';
-	import {
-		Utensils,
-		Award,
-		Star,
-		MapPin,
-		Phone,
-		Mail,
-		Globe,
-		Menu,
-		X,
-		Coffee,
-		Wine,
-		BookOpen
-	} from '@lucide/svelte';
-
-	import heroBg from '$lib/assets/hero-bg.jpg?enhanced';
 	import aboutBg from '$lib/assets/about-bg.jpg?enhanced';
+	import heroBg from '$lib/assets/hero-bg.jpg?enhanced';
+	import {
+		Award,
+		BookOpen,
+		Coffee,
+		Globe,
+		Mail,
+		MapPin,
+		Menu,
+		Phone,
+		Star,
+		Utensils,
+		Wine,
+		X
+	} from '@lucide/svelte';
+	import { fromAction } from 'svelte/attachments';
 
 	let isScrolled = $state(false);
 	let mobileMenuOpen = $state(false);
@@ -32,44 +31,44 @@
 
 	const classes = [
 		{
+			desc: 'O infuzie bogată de literatură și limbi străine, perfectă pentru spiritele creative și comunicative. Un preparat clasic, rafinat prin studiul intensiv al limbii engleze.',
+			grade: '8.87',
 			id: 'A',
 			name: 'Filologie intensiv engleză',
-			profile: 'Uman',
 			places: 28,
-			grade: '8.87',
-			desc: 'O infuzie bogată de literatură și limbi străine, perfectă pentru spiritele creative și comunicative. Un preparat clasic, rafinat prin studiul intensiv al limbii engleze.'
+			profile: 'Uman'
 		},
 		{
+			desc: 'Un meniu echilibrat de științe exacte și explorare a naturii, ideal pentru viitorii cercetători și medici. Ingrediente proaspete din biologie, chimie și fizică.',
+			grade: '9.25',
 			id: 'B',
 			name: 'Științe ale naturii',
-			profile: 'Real',
 			places: 28,
-			grade: '9.25',
-			desc: 'Un meniu echilibrat de științe exacte și explorare a naturii, ideal pentru viitorii cercetători și medici. Ingrediente proaspete din biologie, chimie și fizică.'
+			profile: 'Real'
 		},
 		{
+			desc: 'Specialitatea casei în tehnologie, asezonată cu o perspectivă internațională. O combinație sofisticată de logică pură și comunicare globală.',
+			grade: '9.12',
 			id: 'C',
 			name: 'Matematică-informatică bilingv engleză',
-			profile: 'Real',
 			places: 28,
-			grade: '9.12',
-			desc: 'Specialitatea casei în tehnologie, asezonată cu o perspectivă internațională. O combinație sofisticată de logică pură și comunicare globală.'
+			profile: 'Real'
 		},
 		{
+			desc: 'O porție intensă de algoritmi și programare, pentru mințile analitice pasionate de inovație digitală. Un preparat modern, esențial pentru viitor.',
+			grade: '9.10',
 			id: 'D',
 			name: 'Matematică-informatică intensiv informatică',
-			profile: 'Real',
 			places: 28,
-			grade: '9.10',
-			desc: 'O porție intensă de algoritmi și programare, pentru mințile analitice pasionate de inovație digitală. Un preparat modern, esențial pentru viitor.'
+			profile: 'Real'
 		},
 		{
+			desc: 'Rețeta clasică a succesului în științe exacte, combinând logica matematică cu fundamentele informaticii. Simplu, elegant și extrem de eficient.',
+			grade: '9.07',
 			id: 'E',
 			name: 'Matematică-informatică',
-			profile: 'Real',
 			places: 28,
-			grade: '9.07',
-			desc: 'Rețeta clasică a succesului în științe exacte, combinând logica matematică cu fundamentele informaticii. Simplu, elegant și extrem de eficient.'
+			profile: 'Real'
 		}
 	];
 
@@ -89,15 +88,15 @@
 	];
 
 	const experiences = [
-		{ name: 'C.N.M.K. Debate', desc: 'Arta argumentării servită fierbinte' },
-		{ name: 'Studio 21', desc: 'Teatru și voluntariat pentru suflet' },
-		{ name: 'Club 3D', desc: 'Modelare și imprimare 3D de ultimă generație' },
-		{ name: 'Let’s Dance', desc: 'Dansuri moderne și populare, un desert dinamic' },
-		{ name: 'Ignition Union', desc: 'Robotică și inovație tehnologică' },
-		{ name: 'CNMK Studio', desc: 'Grup de inițiativă locală și creativitate' },
-		{ name: 'Corul Colegiului', desc: 'Armonii vocale rafinate' },
-		{ name: 'Ansambluri Sportive', desc: 'Energie și spirit de echipă' },
-		{ name: 'Revistele Școlii', desc: '„Portret” și „Sui Generis” - literatură fină' }
+		{ desc: 'Arta argumentării servită fierbinte', name: 'C.N.M.K. Debate' },
+		{ desc: 'Teatru și voluntariat pentru suflet', name: 'Studio 21' },
+		{ desc: 'Modelare și imprimare 3D de ultimă generație', name: 'Club 3D' },
+		{ desc: 'Dansuri moderne și populare, un desert dinamic', name: 'Let’s Dance' },
+		{ desc: 'Robotică și inovație tehnologică', name: 'Ignition Union' },
+		{ desc: 'Grup de inițiativă locală și creativitate', name: 'CNMK Studio' },
+		{ desc: 'Armonii vocale rafinate', name: 'Corul Colegiului' },
+		{ desc: 'Energie și spirit de echipă', name: 'Ansambluri Sportive' },
+		{ desc: '„Portret” și „Sui Generis” - literatură fină', name: 'Revistele Școlii' }
 	];
 
 	const certifications = [
@@ -132,8 +131,8 @@
 				}
 			},
 			{
-				threshold: 0.12,
-				rootMargin: '0px 0px -50px 0px'
+				rootMargin: '0px 0px -50px 0px',
+				threshold: 0.12
 			}
 		);
 

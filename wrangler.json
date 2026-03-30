@@ -3,11 +3,9 @@
 	"name": "oferta-targ-2026-3",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2025-11-09",
-	"compatibility_flags": [
-		"nodejs_als"
-	],
+	"compatibility_flags": ["nodejs_als"],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
-	},
+	}
 }
