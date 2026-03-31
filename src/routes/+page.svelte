@@ -96,7 +96,14 @@
 		{ desc: 'Grup de inițiativă locală și creativitate', name: 'CNMK Studio' },
 		{ desc: 'Armonii vocale rafinate', name: 'Corul Colegiului' },
 		{ desc: 'Energie și spirit de echipă', name: 'Ansambluri Sportive' },
-		{ desc: '„Portret” și „Sui Generis” - literatură fină', name: 'Revistele Școlii' }
+		{ desc: '„Portret” și „Sui Generis” - literatură fină', name: 'Revistele Școlii' },
+		{ desc: 'Explorare practică a tehnologiilor de rețea', name: 'Club de Cisco' },
+		{
+			desc: 'Activități aplicate pentru proiecte tehnice',
+			name: 'Club de Robotica Arduino'
+		},
+		{ desc: 'Inițiere în proiectare și construcție de modele aeriene', name: 'Club aeromodele' },
+		{ desc: 'Observație și descoperire în universul științelor spațiale', name: 'Club Astronomie' }
 	];
 
 	const certifications = [
@@ -621,7 +628,7 @@
 		scroll-behavior: smooth;
 	}
 
-	.reveal {
+	:global(.reveal) {
 		opacity: 0;
 		transform: translateY(20px);
 		transition:
@@ -631,7 +638,7 @@
 		will-change: opacity, transform;
 	}
 
-	.reveal.revealed {
+	:global(.reveal.revealed) {
 		opacity: 1;
 		transform: translateY(0);
 	}
